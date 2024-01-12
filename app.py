@@ -55,14 +55,6 @@ def main():
             ]
 
             st.text("Kelas: " + predicted_class_efficientnet)
-            st.json(
-                {
-                    "class_probabilities": {
-                        "Daun keriting": float(predictions_efficientnet[0][0]),
-                        "Sehat": float(predictions_efficientnet[0][1]),
-                    }
-                }
-            )
 
             st.text("VGG16:")
             class_names_vgg16 = [
@@ -72,14 +64,6 @@ def main():
             predicted_class_vgg16 = class_names_vgg16[np.argmax(predictions_vgg16)]
 
             st.text("Kelas: " + predicted_class_vgg16)
-            st.json(
-                {
-                    "class_probabilities": {
-                        "Daun keriting": float(predictions_vgg16[0][0]),
-                        "Sehat": float(predictions_vgg16[0][1]),
-                    }
-                }
-            )
 
             st.text("Xception:")
             class_names_xception = [
@@ -91,15 +75,6 @@ def main():
             ]
 
             st.text("Kelas: " + predicted_class_xception)
-            st.json(
-                {
-                    "class_probabilities": {
-                        "Daun keriting": float(predictions_xception[0][0]),
-                        "Sehat": float(predictions_xception[0][1]),
-                    }
-                }
-            )
-
 
 # Jalankan aplikasi
 if __name__ == "__main__":
